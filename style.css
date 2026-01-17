@@ -143,3 +143,13 @@ height:200px;
 object-fit:cover;
 border-radius:10px;
 }
+.hero a {
+  color: #fff;
+  background: #d4af37;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 15px;
+}
