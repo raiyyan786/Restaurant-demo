@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Table Reservation | Raiyyan Hotel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+    }
+
+    header {
+      background: #d4af37;
+      color: #000;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      background: #000;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 30px auto;
+      background: #1c1c1c;
+      padding: 25px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #d4af37;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+    }
+
+    input {
+      background: #333;
+      color: #fff;
+    }
+
+    button {
+      background: #d4af37;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #c19d2c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      background: #000;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Raiyyan Hotel</h1>
+  <p>Book Your Table Easily</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="reservation.html">Reservation</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container fade-up">
+  <h2>Table Reservation</h2>
+
+  <form id="reservationForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="tel" id="phone" placeholder="Mobile Number" required>
+    <input type="date" id="date" required>
+    <input type="time" id="time" required>
+    <input type="number" id="persons" placeholder="No. of Persons" required>
+    <button type="submit">Book via WhatsApp</button>
+  </form>
+</div>
+
+<footer>
+  © 2026 Raiyyan Hotel
+</footer>
+
+<script>
+document.getElementById("reservationForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var date = document.getElementById("date").value;
+  var time = document.getElementById("time").value;
+  var persons = document.getElementById("persons").value;
+
+  var message =
+    "Hello Raiyyan Hotel,%0A" +
+    "Name: " + name + "%0A" +
+    "Mobile: " + phone + "%0A" +
+    "Date: " + date + "%0A" +
+    "Time: " + time + "%0A" +
+    "Persons: " + persons;
+
+  window.open("https://wa.me/917990780457?text=" + message, "_blank");
+});
+</script>
+
+</body>
+</html>
+
+  
